@@ -1,0 +1,24 @@
+const express = require("express");
+const app = express();
+
+app.use(express.json());
+app.use((req, res, next) => {
+    console.log(req.method, req.url);
+    next();
+});
+app.get("/student", (req, res) => {
+    res.json({ name: "Nikhitha", course: "AIML" });
+});
+app.post("/student", (req, res) => {
+    res.json({ message:"Student added", data: req.body });
+});
+app.put("/student/:id", (req, res) => {
+    res.json({ message:"Student updated", id: req.params.id });
+});
+app.delete("/student/:id", (req, res) => {
+    res.json({ message: "Student deleted", id: req.params.id });
+});
+
+app.listen(3000, () => {
+    console.log("Server started on port 3000");
+});
