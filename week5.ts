@@ -1,0 +1,17 @@
+const express = require("express");
+
+const app = express();
+
+// Dynamic URL
+app.get("/student/:name", (req, res) => {
+    res.send("Student Name: " + req.params.name);
+});
+
+// Another dynamic URL
+app.get("/product/:id", (req, res) => {
+    res.send("Product ID: " + req.params.id);
+});
+
+app.listen(3000, () => {
+    console.log("Server running at http://localhost:3000");
+});
