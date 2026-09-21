@@ -16,9 +16,9 @@ app.get("/", (req, res) => {
             <h1>Server-Side Rendering</h1>
 
             <h2>Student Details</h2>
-            <p>Name: Tejaswi</p>
+            <p>Name: Nikhitha</p>
             <p>Course: Computer Science</p>
-            <p>Year: 2</p>
+            <p>Year: 3</p>
 
             <hr>
 
